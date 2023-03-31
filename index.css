@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .dice {
+    margin: 5% 3% 0;
+    text-align: center;
+    display: inline-block;
+  
+  }
+  
+  .button {
+    margin: auto;
+    width: 17%;
+    height: 17%;
+  }
+  
+  body {
+    background-color: #023666;
+  }
+  
+  h1 {
+    margin: 50px 50px 0;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 5px 0 #434343;
+    font-size: 5rem;
+    color: #FFFFFF;
+  }
+  
+  p {
+    font-size: 2rem;
+    color: #5c9dbb;
+    font-family: 'Fredoka One', cursive;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  footer {
+    color: #4e83d3;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+  
+  }
