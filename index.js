@@ -1,44 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+window.addEventListener( 'DOMContentLoaded', function () {
+	
+    const buttonRoolDice = document.querySelector( '.dice-roll' );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function rollDice () {
 
-let randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
+    const diceSide1 = document.getElementById( 'dice-side-1' );
+    const diceSide2 = document.getElementById( 'dice-side-2' );
+    const status = document.getElementById( 'status' );
 
-let randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
+    const side1 = Math.floor( Math.random() * 6 ) + 1;
+    const side2 = Math.floor( Math.random() * 6 ) + 1;
+    const diceTotal = side1 + side2;
 
-let randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
+    diceSide1.innerHTML = side1;
+    diceSide2.innerHTML = side2;
 
-let image1 = document.querySelectorAll("img")[0];
+    status.innerHTML = 'You rolled ' + diceTotal + '.';
 
-image1.setAttribute("src", randomImageSource);
-
-let randomNumber2 = Math.floor(Math.random() * 6) + 1; //1-6
-
-let randomImageSource2 = "images/dice" + randomNumber2 + ".png";
-
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-
-//If player 1 wins
-
-if (randomNumber1 > randomNumber2) {
-  document.querySelector("h1").innerHTML = "O Jogador 1 Venceu! 🏆";
-}
-else if (randomNumber2 > randomNumber1) {
-  document.querySelector("h1").innerHTML = "O Jogador 2 Venceu! 🏆";
-}
-else {
-  document.querySelector("h1").innerHTML = "Empate!";
+    if ( side1 === side2 ) {
+        status.innerHTML += ' Doubles! You get a free turn!';
+    }
 }
 
+buttonRoolDice.addEventListener( 'click', rollDice, false );
 
-
-reportWebVitals();
+}, false);

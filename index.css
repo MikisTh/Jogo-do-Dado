@@ -1,50 +1,43 @@
 body {
-  text-align: center;
-  color: #02353f;
-  background-color: rgba(2, 59, 90, 0.667);
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-header {
-  text-align: center;
-  color: #02353f;  
-  background-color: rgba(2, 130, 119, 0.667);
-}
- footer {
- text-align: center;
- color: #02353f;
- background-color: #0dca;
- }
- button {
-  text-align: center;
-  color: #02353f;
-  background-color: #0dca;
-  margin-top: 1px;
-  margin-left: 1px;
-  margin-right: 1px;
-
-  }
-
-img {
-  text-align: center;
-  color: #06c8ee;
+    position: relative;
+		background: rgb(20, 58, 91);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-.dice-6 {
-  width:175px;
-  height:165px;
-  text-align:center;
-  display:inline-block;
-  position:relative;
-  transform-style:preserve-3d
-  
- }
+.column {
+    display: flex;
+    align-items: center;
+}
+
+#status {
+    position: absolute;
+    top: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+		text-align: center;
+}
+
+.dice {
+    width: 32px;
+    float: left;
+    background-color: rgb(5, 103, 145);
+    border: 1px solid rgb(183, 237, 254);
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.dice-roll {
+    cursor: pointer;
+    text-transform: capitalize;
+}
